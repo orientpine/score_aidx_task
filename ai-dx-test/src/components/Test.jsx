@@ -63,7 +63,7 @@ const Test = ({ questions, answers, onAnswer, onComplete }) => {
 
           <div className="mb-8">
             <img
-              src={`/images/q${currentQuestion.id}.svg`}
+              src={`/${currentQuestion.id}.png`}
               alt={`${currentQuestion.category} - ${currentQuestion.situation}`}
               className="w-full max-h-72 object-contain rounded-2xl border border-taupe/20 bg-cream/40 p-4 shadow"
               loading="lazy"
