@@ -1,0 +1,219 @@
+
+{
+  "title": "AI/DX 역량 진단 테스트",
+  "description": "귀하의 AI 및 디지털 전환 역량을 진단하는 테스트입니다.",
+  "questions": [
+    {
+      "id": 1,
+      "category": "업무 자동화",
+      "situation": "반복적인 데이터 입력 작업을 수행해야 합니다.",
+      "imagePrompt": "A person working with automated data entry software on multiple screens",
+      "options": [
+        {
+          "text": "수동으로 하나씩 입력한다",
+          "score": 0
+        },
+        {
+          "text": "RPA 도구를 활용하여 자동화한다",
+          "score": 10
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "category": "데이터 분석",
+      "situation": "대량의 고객 데이터를 분석해야 합니다.",
+      "imagePrompt": "AI-powered data analytics dashboard showing customer insights and patterns",
+      "options": [
+        {
+          "text": "엑셀을 사용하여 수동 분석한다",
+          "score": 0
+        },
+        {
+          "text": "AI 분석 도구를 활용한다",
+          "score": 10
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "category": "의사소통",
+      "situation": "다국어 고객과 소통해야 합니다.",
+      "imagePrompt": "Real-time translation interface for multilingual customer communication",
+      "options": [
+        {
+          "text": "번역 서비스를 매번 찾아본다",
+          "score": 0
+        },
+        {
+          "text": "실시간 AI 번역 도구를 사용한다",
+          "score": 10
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "category": "문서 작성",
+      "situation": "보고서를 작성해야 합니다.",
+      "imagePrompt": "AI writing assistant helping create professional reports and documents",
+      "options": [
+        {
+          "text": "처음부터 직접 작성한다",
+          "score": 0
+        },
+        {
+          "text": "AI 작성 도우미를 활용한다",
+          "score": 10
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "category": "고객 서비스",
+      "situation": "고객 문의에 신속하게 응답해야 합니다.",
+      "imagePrompt": "AI chatbot interface providing instant customer support responses",
+      "options": [
+        {
+          "text": "모든 문의에 직접 응답한다",
+          "score": 0
+        },
+        {
+          "text": "AI 챗봇을 활용하여 초기 응답한다",
+          "score": 10
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "category": "회의 관리",
+      "situation": "회의 내용을 정리해야 합니다.",
+      "imagePrompt": "AI meeting assistant automatically transcribing and summarizing meeting content",
+      "options": [
+        {
+          "text": "수동으로 메모하고 정리한다",
+          "score": 0
+        },
+        {
+          "text": "AI 회의 도우미로 자동 요약한다",
+          "score": 10
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "category": "프로젝트 관리",
+      "situation": "프로젝트 진행 상황을 모니터링해야 합니다.",
+      "imagePrompt": "AI-powered project management dashboard with predictive analytics",
+      "options": [
+        {
+          "text": "수동으로 진행 상황을 체크한다",
+          "score": 0
+        },
+        {
+          "text": "AI 기반 프로젝트 관리 도구를 사용한다",
+          "score": 10
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "category": "마케팅",
+      "situation": "마케팅 캠페인을 기획해야 합니다.",
+      "imagePrompt": "AI marketing platform analyzing customer behavior and campaign optimization",
+      "options": [
+        {
+          "text": "경험과 직감에 의존한다",
+          "score": 0
+        },
+        {
+          "text": "AI 마케팅 분석 도구를 활용한다",
+          "score": 10
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "category": "교육 및 훈련",
+      "situation": "직원 교육을 실시해야 합니다.",
+      "imagePrompt": "Personalized AI training platforms on their devices",
+      "options": [
+        {
+          "text": "일괄적인 집합 교육을 실시한다",
+          "score": 0
+        },
+        {
+          "text": "AI 기반 맞춤형 학습 플랫폼을 활용한다",
+          "score": 10
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "category": "품질 관리",
+      "situation": "제품의 품질 검사를 수행해야 합니다.",
+      "imagePrompt": "An automated quality control system using AI vision to inspect products on a production line",
+      "options": [
+        {
+          "text": "작업자가 육안으로 전수 검사한다",
+          "score": 0
+        },
+        {
+          "text": "AI 비전 시스템으로 자동 검사한다",
+          "score": 10
+        }
+      ]
+    }
+  ],
+  "results": {
+    "ranges": [
+      {
+        "min": 0,
+        "max": 30,
+        "level": "초급",
+        "title": "디지털 전환 입문자",
+        "description": "AI와 디지털 도구 활용에 대한 기초적인 이해가 필요합니다.",
+        "recommendations": [
+          "기본적인 AI 도구 사용법 학습",
+          "업무 자동화 도구 체험",
+          "디지털 리터러시 교육 수강"
+        ]
+      },
+      {
+        "min": 31,
+        "max": 60,
+        "level": "중급",
+        "title": "디지털 활용자",
+        "description": "AI 도구를 일부 업무에 활용하고 있으나 더 체계적인 접근이 필요합니다.",
+        "recommendations": [
+          "AI 활용 범위 확대",
+          "데이터 분석 역량 강화",
+          "디지털 전략 수립"
+        ]
+      },
+      {
+        "min": 61,
+        "max": 80,
+        "level": "고급",
+        "title": "디지털 전문가",
+        "description": "AI와 디지털 도구를 효과적으로 활용하고 있으며, 조직 내 확산이 필요합니다.",
+        "recommendations": [
+          "조직 내 AI 도입 리딩",
+          "고급 AI 기술 학습",
+          "디지털 혁신 프로젝트 추진"
+        ]
+      },
+      {
+        "min": 81,
+        "max": 100,
+        "level": "전문가",
+        "title": "AI/DX 리더",
+        "description": "AI와 디지털 전환의 전문가로서 조직과 업계를 선도하고 있습니다.",
+        "recommendations": [
+          "AI 전략 수립 및 실행",
+          "디지털 혁신 생태계 구축",
+          "차세대 AI 기술 연구"
+        ]
+      }
+    ]
+  }
+}

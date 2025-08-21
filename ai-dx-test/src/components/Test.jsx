@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react'
 const Test = ({ questions, answers, onAnswer, onComplete }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [selectedOption, setSelectedOption] = useState(null)
-  const [showImagePrompt, setShowImagePrompt] = useState(false)
   
   const currentQuestion = questions[currentQuestionIndex]
   const progress = ((currentQuestionIndex + 1) / questions.length) * 100
@@ -15,7 +14,6 @@ const Test = ({ questions, answers, onAnswer, onComplete }) => {
       if (currentQuestionIndex < questions.length - 1) {
         setCurrentQuestionIndex(currentQuestionIndex + 1)
         setSelectedOption(null)
-        setShowImagePrompt(false)
       } else {
         onComplete()
       }
@@ -62,6 +60,15 @@ const Test = ({ questions, answers, onAnswer, onComplete }) => {
           <p className="text-lg text-wine-dark mb-8">
             {currentQuestion.situation}
           </p>
+
+          <div className="mb-8">
+            <img
+              src={`/images/q${currentQuestion.id}.svg`}
+              alt={`${currentQuestion.category} - ${currentQuestion.situation}`}
+              className="w-full max-h-72 object-contain rounded-2xl border border-taupe/20 bg-cream/40 p-4 shadow"
+              loading="lazy"
+            />
+          </div>
           
           <div className="space-y-3">
             {currentQuestion.options.map((option, index) => (
@@ -89,24 +96,6 @@ const Test = ({ questions, answers, onAnswer, onComplete }) => {
               </button>
             ))}
           </div>
-        </div>
-        
-        <div className="mb-6">
-          <button
-            onClick={() => setShowImagePrompt(!showImagePrompt)}
-            className="text-sm text-forest hover:text-wine underline decoration-dotted transition-colors duration-200"
-          >
-            {showImagePrompt ? '이미지 프롬프트 숨기기' : '이미지 생성 프롬프트 보기'}
-          </button>
-          
-          {showImagePrompt && (
-            <div className="mt-4 p-5 bg-cream/50 rounded-xl border border-taupe/20">
-              <p className="text-sm text-wine-dark">
-                <span className="font-semibold">이미지 생성 프롬프트:</span><br />
-                {currentQuestion.imagePrompt}
-              </p>
-            </div>
-          )}
         </div>
         
         <div className="flex justify-between">

@@ -6,7 +6,6 @@
       "id": 1,
       "category": "AI 행정업무 활용",
       "situation": "공문서 작성 시 AI의 가장 효과적인 활용 방식은?",
-      "imagePrompt": "Professional working with AI assistant to create official documents on computer",
       "options": [
         {
           "text": "전체 문서를 AI가 작성한 후 검토만 하기",
@@ -22,7 +21,6 @@
       "id": 2,
       "category": "AI 행정업무 활용",
       "situation": "행정 업무에서 AI 활용의 한계를 올바르게 인식하고 있는 경우는?",
-      "imagePrompt": "Office worker reviewing AI-generated administrative documents with legal compliance checklist",
       "options": [
         {
           "text": "AI가 생성한 내용도 법적 책임은 사용자에게 있다고 인식",
@@ -38,7 +36,6 @@
       "id": 3,
       "category": "AI 행정업무 활용",
       "situation": "복잡한 행정 프로세스를 AI와 함께 처리할 때 가장 중요한 것은?",
-      "imagePrompt": "Hybrid workflow diagram showing human decision points and AI automation in administrative process",
       "options": [
         {
           "text": "모든 단계를 AI에게 일괄 위임하여 효율성 극대화",
@@ -54,7 +51,6 @@
       "id": 4,
       "category": "AI 행정업무 활용",
       "situation": "AI를 활용한 업무 자동화에서 품질 보장을 위한 최선의 방법은?",
-      "imagePrompt": "Quality assurance dashboard with AI automation checkpoints and verification systems",
       "options": [
         {
           "text": "AI 결과물에 대한 체크리스트 기반 검증 시스템 구축",
@@ -70,7 +66,6 @@
       "id": 5,
       "category": "AI 행정업무 활용",
       "situation": "행정업무에서 AI 프롬프트 설계 시 가장 중요한 요소는?",
-      "imagePrompt": "Structured prompt template incorporating organizational standards and regulations",
       "options": [
         {
           "text": "창의적이고 자유로운 표현을 위한 개방형 프롬프트",
@@ -86,7 +81,6 @@
       "id": 6,
       "category": "AI 연구활동 통합",
       "situation": "연구 아이디어 발굴에서 AI의 가장 효과적인 역할은?",
-      "imagePrompt": "Researcher using AI to analyze research gaps and generate novel perspectives",
       "options": [
         {
           "text": "기존 연구의 Gap analysis와 새로운 관점 제시",
@@ -102,7 +96,6 @@
       "id": 7,
       "category": "AI 연구활동 통합",
       "situation": "AI와 함께 논문을 작성할 때 연구 윤리를 올바르게 준수하는 방법은?",
-      "imagePrompt": "Academic paper with clear AI usage disclosure and attribution statements",
       "options": [
         {
           "text": "AI 사용 여부를 논문에 명시하고 핵심 아이디어는 연구자가 개발",
@@ -118,7 +111,6 @@
       "id": 8,
       "category": "AI 연구활동 통합",
       "situation": "복잡한 코드를 AI와 함께 개발할 때 전문가의 접근법은?",
-      "imagePrompt": "Developer reviewing and optimizing AI-generated code with deep understanding",
       "options": [
         {
           "text": "AI가 생성한 코드를 그대로 사용하되 테스트만 철저히 실행",
@@ -134,7 +126,6 @@
       "id": 9,
       "category": "AI 연구활동 통합",
       "situation": "연구 데이터 분석에서 AI 활용의 올바른 한계 설정은?",
-      "imagePrompt": "Researcher interpreting AI data analysis results with critical evaluation",
       "options": [
         {
           "text": "AI의 분석 결과를 연구자가 해석하고 의미를 부여",
@@ -150,7 +141,6 @@
       "id": 10,
       "category": "AI 연구활동 통합",
       "situation": "학제간 연구에서 AI의 가장 큰 장점을 활용하는 방법은?",
-      "imagePrompt": "AI connecting and integrating knowledge from multiple academic disciplines",
       "options": [
         {
           "text": "서로 다른 분야의 지식을 연결하고 통합하는 브릿지 역할",
@@ -166,7 +156,6 @@
       "id": 11,
       "category": "AI 도구 숙련도",
       "situation": "여러 AI 도구를 통합 활용할 때 전문가의 전략은?",
-      "imagePrompt": "Professional workspace showing optimized workflow with multiple AI tools for different tasks",
       "options": [
         {
           "text": "각 도구의 강점을 파악하고 작업 단계별로 최적 도구 선택",
@@ -182,7 +171,6 @@
       "id": 12,
       "category": "AI 도구 숙련도",
       "situation": "AI 도구의 한계를 극복하기 위한 고급 기법은?",
-      "imagePrompt": "Cross-validation and ensemble approach combining multiple AI tool results",
       "options": [
         {
           "text": "여러 도구의 결과를 교차 검증하고 앙상블 방식으로 활용",
@@ -198,7 +186,6 @@
       "id": 13,
       "category": "AI 도구 숙련도",
       "situation": "전문 분야 AI 도구 도입 시 가장 중요한 평가 기준은?",
-      "imagePrompt": "Evaluation matrix showing domain accuracy and workflow compatibility metrics",
       "options": [
         {
           "text": "도구의 인지도와 사용자 수",
@@ -214,7 +201,6 @@
       "id": 14,
       "category": "AI 도구 숙련도",
       "situation": "AI 도구 간 데이터 연계 시 전문가가 고려해야 할 핵심 요소는?",
-      "imagePrompt": "Secure data pipeline between AI tools with privacy compliance indicators",
       "options": [
         {
           "text": "데이터 형식 통일과 개인정보 보호 규정 준수",
@@ -230,7 +216,6 @@
       "id": 15,
       "category": "AI 도구 숙련도",
       "situation": "새로운 AI 도구 학습 시 효율적인 접근 방법은?",
-      "imagePrompt": "Professional testing new AI tool at specific workflow integration points",
       "options": [
         {
           "text": "공식 매뉴얼을 완독한 후 단계별 실습 진행",
@@ -246,7 +231,6 @@
       "id": 16,
       "category": "AI 기술 이해도",
       "situation": "LLM의 한계를 정확히 이해하고 있는 경우는?",
-      "imagePrompt": "Diagram showing probabilistic nature of LLM outputs with uncertainty indicators",
       "options": [
         {
           "text": "할루시네이션은 프롬프트 개선으로 완전히 해결 가능",
@@ -262,7 +246,6 @@
       "id": 17,
       "category": "AI 기술 이해도",
       "situation": "프롬프트 엔지니어링의 고급 기법에 해당하는 것은?",
-      "imagePrompt": "Complex prompt structure showing Chain-of-Thought and Few-shot learning examples",
       "options": [
         {
           "text": "Chain-of-Thought와 Few-shot learning을 조합한 복합 프롬프트",
@@ -278,7 +261,6 @@
       "id": 18,
       "category": "AI 기술 이해도",
       "situation": "MCP(Model Context Protocol)의 핵심 가치는?",
-      "imagePrompt": "System architecture showing AI tools safely interacting with external systems via MCP",
       "options": [
         {
           "text": "AI 모델의 성능 향상을 위한 최적화 프로토콜",
@@ -294,7 +276,6 @@
       "id": 19,
       "category": "AI 기술 이해도",
       "situation": "RAG(Retrieval-Augmented Generation) 시스템 구축 시 가장 중요한 요소는?",
-      "imagePrompt": "RAG system architecture emphasizing retrieval accuracy and context relevance balance",
       "options": [
         {
           "text": "벡터 데이터베이스의 크기와 저장 용량",
@@ -310,7 +291,6 @@
       "id": 20,
       "category": "AI 기술 이해도",
       "situation": "AI 모델의 fine-tuning과 prompt engineering의 적절한 활용 시나리오는?",
-      "imagePrompt": "Comparison chart showing when to use fine-tuning vs prompt engineering",
       "options": [
         {
           "text": "Fine-tuning은 특화된 도메인, Prompt engineering은 일반적 작업",
@@ -326,7 +306,6 @@
       "id": 21,
       "category": "AI 환경 구축",
       "situation": "조직 내 AI 환경 구축 시 가장 우선해야 할 요소는?",
-      "imagePrompt": "Enterprise AI infrastructure highlighting data governance and security frameworks",
       "options": [
         {
           "text": "최신 하드웨어와 고성능 컴퓨팅 인프라 확보",
@@ -342,7 +321,6 @@
       "id": 22,
       "category": "AI 환경 구축",
       "situation": "개인 AI 워크플로우 최적화의 핵심은?",
-      "imagePrompt": "Personalized AI workflow setup based on analyzed work patterns",
       "options": [
         {
           "text": "가장 비싼 프리미엄 도구들을 모두 구독",
@@ -358,7 +336,6 @@
       "id": 23,
       "category": "AI 환경 구축",
       "situation": "AI 도구 도입 시 팀 차원의 성공 요인은?",
-      "imagePrompt": "Team collaboration space with role-specific AI tools and defined workflows",
       "options": [
         {
           "text": "모든 팀원이 동일한 도구를 사용하도록 표준화",
@@ -374,7 +351,6 @@
       "id": 24,
       "category": "AI 환경 구축",
       "situation": "민감한 데이터를 다루는 환경에서의 AI 활용 원칙은?",
-      "imagePrompt": "Secure AI deployment with on-premise solutions and data anonymization processes",
       "options": [
         {
           "text": "온프레미스 AI 솔루션 또는 데이터 익명화 후 활용",
@@ -390,7 +366,6 @@
       "id": 25,
       "category": "AI 환경 구축",
       "situation": "AI 환경의 지속가능성을 위한 핵심 전략은?",
-      "imagePrompt": "Adaptive AI ecosystem with continuous monitoring and technology trend tracking",
       "options": [
         {
           "text": "최신 기술 동향을 지속적으로 모니터링하고 적응하는 체계 구축",
@@ -406,7 +381,6 @@
       "id": 26,
       "category": "AI 품질 관리",
       "situation": "AI 결과물의 신뢰성 검증에서 가장 중요한 원칙은?",
-      "imagePrompt": "Expert critically reviewing AI outputs with domain knowledge and fact-checking tools",
       "options": [
         {
           "text": "다수의 AI 도구 결과를 비교하여 일치하는 답 채택",
@@ -422,7 +396,6 @@
       "id": 27,
       "category": "AI 품질 관리",
       "situation": "AI 사용 시 편향성(bias) 문제를 올바르게 인식하고 있는 경우는?",
-      "imagePrompt": "Multi-perspective analysis showing potential biases in AI training data and outputs",
       "options": [
         {
           "text": "AI는 객관적이므로 편향성 걱정 없이 결과를 신뢰해도 됨",
@@ -438,7 +411,6 @@
       "id": 28,
       "category": "AI 품질 관리",
       "situation": "저작권과 AI 활용의 올바른 이해는?",
-      "imagePrompt": "Legal framework showing AI copyright considerations and content originality checks",
       "options": [
         {
           "text": "AI가 생성한 콘텐츠는 저작권이 없으므로 자유롭게 사용 가능",
@@ -454,7 +426,6 @@
       "id": 29,
       "category": "AI 품질 관리",
       "situation": "조직 내 AI 사용 가이드라인 수립 시 핵심 요소는?",
-      "imagePrompt": "Comprehensive AI governance framework with usage scope, quality standards, and ethics",
       "options": [
         {
           "text": "AI 사용을 최대한 자유롭게 허용하되 결과에만 책임 부여",
@@ -470,7 +441,6 @@
       "id": 30,
       "category": "AI 품질 관리",
       "situation": "AI 활용 역량 지속 개발을 위한 최선의 접근법은?",
-      "imagePrompt": "Professional community sharing AI experiences and practical learning applications",
       "options": [
         {
           "text": "공식 인증서와 교육과정 이수에 집중",
