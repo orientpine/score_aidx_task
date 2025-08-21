@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "images:webp": "node scripts/convert-to-webp.mjs"
+    "images:webp": "node scripts/convert-to-webp.mjs",
+    "image:webp:one": "node scripts/convert-single.mjs"
   },
   "dependencies": {
     "react": "^19.1.1",

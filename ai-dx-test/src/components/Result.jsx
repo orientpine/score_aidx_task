@@ -1,48 +1,4 @@
-import { useState, useEffect } from 'react'
-
 const Result = ({ result, onRestart }) => {
-  const [isSaving, setIsSaving] = useState(false)
-  const [saveError, setSaveError] = useState(null)
-  
-  useEffect(() => {
-    saveToSheetBest()
-  }, [result])
-  
-  const saveToSheetBest = async () => {
-    setIsSaving(true)
-    setSaveError(null)
-    
-    try {
-      const sheetBestUrl = import.meta.env.VITE_SHEET_BEST_URL || 'https://sheet.best/api/sheets/YOUR_SHEET_ID'
-      
-      const data = {
-        timestamp: new Date().toISOString(),
-        score: result.score,
-        level: result.level,
-        title: result.title,
-        userAgent: navigator.userAgent,
-        referrer: document.referrer || 'direct'
-      }
-      
-      const response = await fetch(sheetBestUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data)
-      })
-      
-      if (!response.ok) {
-        throw new Error('Failed to save result')
-      }
-    } catch (error) {
-      console.error('Error saving to Sheet.best:', error)
-      setSaveError('결과 저장에 실패했습니다. 하지만 결과는 확인 가능합니다.')
-    } finally {
-      setIsSaving(false)
-    }
-  }
-  
   const getScoreColor = () => {
     if (result.score >= 80) return 'from-forest to-wine'
     if (result.score >= 60) return 'from-wine to-wine-dark'
@@ -57,14 +13,6 @@ const Result = ({ result, onRestart }) => {
           <h1 className="text-4xl font-bold text-wine mb-6">
             테스트 결과
           </h1>
-          
-          {isSaving && (
-            <div className="text-sm text-taupe mb-2">결과 저장 중...</div>
-          )}
-          
-          {saveError && (
-            <div className="text-sm text-wine mb-2">{saveError}</div>
-          )}
           
           <div className="relative inline-block">
             <div className={`text-6xl font-bold bg-gradient-to-r ${getScoreColor()} bg-clip-text text-transparent`}>
