@@ -1,14 +1,10 @@
 import { useState, useEffect } from 'react'
 
 const Result = ({ result, onRestart }) => {
-  const [shareUrl, setShareUrl] = useState('')
-  const [isCopied, setIsCopied] = useState(false)
   const [isSaving, setIsSaving] = useState(false)
   const [saveError, setSaveError] = useState(null)
   
   useEffect(() => {
-    const url = `${window.location.origin}?score=${result.score}&level=${encodeURIComponent(result.level)}`
-    setShareUrl(url)
     saveToSheetBest()
   }, [result])
   
@@ -45,26 +41,6 @@ const Result = ({ result, onRestart }) => {
     } finally {
       setIsSaving(false)
     }
-  }
-  
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(shareUrl)
-    setIsCopied(true)
-    setTimeout(() => setIsCopied(false), 2000)
-  }
-  
-  const shareOnSocial = (platform) => {
-    const text = `나의 AI/DX 역량 점수는 ${result.score}점! "${result.title}" 레벨입니다.`
-    const encodedText = encodeURIComponent(text)
-    const encodedUrl = encodeURIComponent(shareUrl)
-    
-    const urls = {
-      twitter: `https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`,
-      linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
-      facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`
-    }
-    
-    window.open(urls[platform], '_blank', 'width=600,height=400')
   }
   
   const getScoreColor = () => {
@@ -128,48 +104,6 @@ const Result = ({ result, onRestart }) => {
               </li>
             ))}
           </ul>
-        </div>
-        
-        <div className="border-t border-taupe/20 pt-8">
-          <h3 className="text-lg font-semibold text-forest mb-5">
-            결과 공유하기
-          </h3>
-          
-          <div className="flex flex-wrap gap-3 mb-4">
-            <button
-              onClick={() => shareOnSocial('twitter')}
-              className="flex-1 min-w-[100px] px-4 py-3 bg-wine text-cream rounded-xl hover:bg-wine-dark transition-all duration-300 shadow-md hover:shadow-lg"
-            >
-              Twitter
-            </button>
-            <button
-              onClick={() => shareOnSocial('linkedin')}
-              className="flex-1 min-w-[100px] px-4 py-3 bg-forest text-cream rounded-xl hover:bg-wine-dark transition-all duration-300 shadow-md hover:shadow-lg"
-            >
-              LinkedIn
-            </button>
-            <button
-              onClick={() => shareOnSocial('facebook')}
-              className="flex-1 min-w-[100px] px-4 py-3 bg-wine-dark text-cream rounded-xl hover:bg-forest transition-all duration-300 shadow-md hover:shadow-lg"
-            >
-              Facebook
-            </button>
-          </div>
-          
-          <div className="flex gap-2 mb-6">
-            <input
-              type="text"
-              value={shareUrl}
-              readOnly
-              className="flex-1 px-4 py-3 border border-taupe/30 rounded-xl bg-cream/30 text-sm text-wine-dark"
-            />
-            <button
-              onClick={copyToClipboard}
-              className="px-5 py-3 bg-taupe/30 text-wine-dark rounded-xl hover:bg-taupe/40 transition-all duration-300 font-medium"
-            >
-              {isCopied ? '복사됨!' : '링크 복사'}
-            </button>
-          </div>
         </div>
         
         <button
