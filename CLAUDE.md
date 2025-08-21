@@ -1,0 +1,1 @@
+- 내 요청이 끝날때마다 git add & git commit을 해. commit메세지는 수정사항을 충분히 반영하도록 작성해

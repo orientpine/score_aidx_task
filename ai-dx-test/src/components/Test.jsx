@@ -32,34 +32,34 @@ const Test = ({ questions, answers, onAnswer, onComplete }) => {
   
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
-      <div className="max-w-3xl w-full bg-white rounded-2xl shadow-xl p-8">
+      <div className="max-w-3xl w-full bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl p-8 border border-taupe/20">
         <div className="mb-6">
           <div className="flex justify-between items-center mb-2">
-            <span className="text-sm font-medium text-gray-600">
+            <span className="text-sm font-medium text-wine-dark">
               문제 {currentQuestionIndex + 1} / {questions.length}
             </span>
-            <span className="text-sm font-medium text-gray-600">
+            <span className="text-sm font-medium text-wine-dark">
               {Math.round(progress)}% 완료
             </span>
           </div>
-          <div className="w-full bg-gray-200 rounded-full h-2">
+          <div className="w-full bg-taupe/30 rounded-full h-3">
             <div 
-              className="bg-gradient-to-r from-indigo-500 to-blue-600 h-2 rounded-full transition-all duration-300"
+              className="bg-gradient-to-r from-wine to-forest h-3 rounded-full transition-all duration-500"
               style={{ width: `${progress}%` }}
             />
           </div>
         </div>
         
         <div className="mb-8">
-          <div className="inline-block px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium mb-4">
+          <div className="inline-block px-4 py-2 bg-forest/10 text-forest rounded-full text-sm font-semibold mb-4 border border-forest/20">
             {currentQuestion.category}
           </div>
           
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">
+          <h2 className="text-2xl font-bold text-wine mb-4">
             상황 {currentQuestionIndex + 1}
           </h2>
           
-          <p className="text-lg text-gray-700 mb-6">
+          <p className="text-lg text-wine-dark mb-8">
             {currentQuestion.situation}
           </p>
           
@@ -68,23 +68,23 @@ const Test = ({ questions, answers, onAnswer, onComplete }) => {
               <button
                 key={index}
                 onClick={() => setSelectedOption(option.score)}
-                className={`w-full text-left p-4 rounded-xl border-2 transition-all duration-200 ${
+                className={`w-full text-left p-5 rounded-2xl border-2 transition-all duration-300 ${
                   selectedOption === option.score
-                    ? 'border-indigo-500 bg-indigo-50'
-                    : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
+                    ? 'border-wine bg-wine/5'
+                    : 'border-taupe/30 hover:border-taupe/50 hover:bg-cream/30'
                 }`}
               >
                 <div className="flex items-start">
-                  <div className={`w-5 h-5 rounded-full border-2 mr-3 mt-0.5 flex items-center justify-center ${
+                  <div className={`w-5 h-5 rounded-full border-2 mr-4 mt-0.5 flex items-center justify-center ${
                     selectedOption === option.score
-                      ? 'border-indigo-500 bg-indigo-500'
-                      : 'border-gray-300'
+                      ? 'border-wine bg-wine'
+                      : 'border-taupe/50'
                   }`}>
                     {selectedOption === option.score && (
                       <div className="w-2 h-2 bg-white rounded-full" />
                     )}
                   </div>
-                  <span className="text-gray-700">{option.text}</span>
+                  <span className="text-wine-dark">{option.text}</span>
                 </div>
               </button>
             ))}
@@ -94,14 +94,14 @@ const Test = ({ questions, answers, onAnswer, onComplete }) => {
         <div className="mb-6">
           <button
             onClick={() => setShowImagePrompt(!showImagePrompt)}
-            className="text-sm text-indigo-600 hover:text-indigo-700 underline"
+            className="text-sm text-forest hover:text-wine underline decoration-dotted transition-colors duration-200"
           >
             {showImagePrompt ? '이미지 프롬프트 숨기기' : '이미지 생성 프롬프트 보기'}
           </button>
           
           {showImagePrompt && (
-            <div className="mt-3 p-4 bg-gray-50 rounded-lg">
-              <p className="text-sm text-gray-600">
+            <div className="mt-4 p-5 bg-cream/50 rounded-xl border border-taupe/20">
+              <p className="text-sm text-wine-dark">
                 <span className="font-semibold">이미지 생성 프롬프트:</span><br />
                 {currentQuestion.imagePrompt}
               </p>
@@ -113,10 +113,10 @@ const Test = ({ questions, answers, onAnswer, onComplete }) => {
           <button
             onClick={handlePrevious}
             disabled={currentQuestionIndex === 0}
-            className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+            className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
               currentQuestionIndex === 0
-                ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                ? 'bg-taupe/20 text-taupe/50 cursor-not-allowed'
+                : 'bg-taupe/30 text-wine-dark hover:bg-taupe/40'
             }`}
           >
             이전
@@ -125,10 +125,10 @@ const Test = ({ questions, answers, onAnswer, onComplete }) => {
           <button
             onClick={handleNext}
             disabled={selectedOption === null}
-            className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+            className={`px-7 py-3 rounded-xl font-semibold transition-all duration-300 ${
               selectedOption === null
-                ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                : 'bg-gradient-to-r from-indigo-500 to-blue-600 text-white hover:from-indigo-600 hover:to-blue-700'
+                ? 'bg-taupe/20 text-taupe/50 cursor-not-allowed'
+                : 'bg-gradient-to-r from-wine to-forest text-cream hover:from-wine-dark hover:to-forest shadow-lg hover:shadow-xl'
             }`}
           >
             {currentQuestionIndex === questions.length - 1 ? '결과 확인' : '다음'}

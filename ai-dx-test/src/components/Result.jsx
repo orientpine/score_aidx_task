@@ -68,89 +68,89 @@ const Result = ({ result, onRestart }) => {
   }
   
   const getScoreColor = () => {
-    if (result.score >= 80) return 'from-green-500 to-emerald-600'
-    if (result.score >= 60) return 'from-blue-500 to-indigo-600'
-    if (result.score >= 30) return 'from-yellow-500 to-orange-600'
-    return 'from-red-500 to-pink-600'
+    if (result.score >= 80) return 'from-forest to-wine'
+    if (result.score >= 60) return 'from-wine to-wine-dark'
+    if (result.score >= 30) return 'from-taupe to-wine'
+    return 'from-wine-dark to-taupe'
   }
   
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
-      <div className="max-w-2xl w-full bg-white rounded-2xl shadow-xl p-8">
+      <div className="max-w-2xl w-full bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl p-8 border border-taupe/20">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-800 mb-4">
+          <h1 className="text-4xl font-bold text-wine mb-6">
             테스트 결과
           </h1>
           
           {isSaving && (
-            <div className="text-sm text-gray-500 mb-2">결과 저장 중...</div>
+            <div className="text-sm text-taupe mb-2">결과 저장 중...</div>
           )}
           
           {saveError && (
-            <div className="text-sm text-red-500 mb-2">{saveError}</div>
+            <div className="text-sm text-wine mb-2">{saveError}</div>
           )}
           
           <div className="relative inline-block">
             <div className={`text-6xl font-bold bg-gradient-to-r ${getScoreColor()} bg-clip-text text-transparent`}>
               {result.score}점
             </div>
-            <div className="text-lg text-gray-600 mt-2">
+            <div className="text-lg text-wine-dark mt-3">
               총 100점 만점
             </div>
           </div>
         </div>
         
-        <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-xl p-6 mb-6">
+        <div className="bg-gradient-to-br from-cream/50 to-taupe/10 rounded-2xl p-7 mb-8 border border-taupe/20">
           <div className="text-center mb-4">
-            <span className="inline-block px-4 py-2 bg-indigo-500 text-white rounded-full text-sm font-semibold">
+            <span className="inline-block px-5 py-2 bg-wine text-cream rounded-full text-sm font-bold tracking-wide">
               {result.level}
             </span>
           </div>
           
-          <h2 className="text-2xl font-bold text-gray-800 text-center mb-3">
+          <h2 className="text-2xl font-bold text-forest text-center mb-4">
             {result.title}
           </h2>
           
-          <p className="text-gray-700 text-center">
+          <p className="text-wine-dark text-center leading-relaxed">
             {result.description}
           </p>
         </div>
         
         <div className="mb-8">
-          <h3 className="text-lg font-semibold text-gray-800 mb-3">
+          <h3 className="text-lg font-semibold text-forest mb-4">
             추천 개선 방안
           </h3>
           <ul className="space-y-2">
             {result.recommendations.map((rec, index) => (
               <li key={index} className="flex items-start">
-                <span className="text-indigo-500 mr-2">•</span>
-                <span className="text-gray-700">{rec}</span>
+                <span className="text-wine mr-3 text-lg">•</span>
+                <span className="text-wine-dark">{rec}</span>
               </li>
             ))}
           </ul>
         </div>
         
-        <div className="border-t pt-6">
-          <h3 className="text-lg font-semibold text-gray-800 mb-4">
+        <div className="border-t border-taupe/20 pt-8">
+          <h3 className="text-lg font-semibold text-forest mb-5">
             결과 공유하기
           </h3>
           
           <div className="flex flex-wrap gap-3 mb-4">
             <button
               onClick={() => shareOnSocial('twitter')}
-              className="flex-1 min-w-[100px] px-4 py-2 bg-sky-500 text-white rounded-lg hover:bg-sky-600 transition-colors"
+              className="flex-1 min-w-[100px] px-4 py-3 bg-wine text-cream rounded-xl hover:bg-wine-dark transition-all duration-300 shadow-md hover:shadow-lg"
             >
               Twitter
             </button>
             <button
               onClick={() => shareOnSocial('linkedin')}
-              className="flex-1 min-w-[100px] px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800 transition-colors"
+              className="flex-1 min-w-[100px] px-4 py-3 bg-forest text-cream rounded-xl hover:bg-wine-dark transition-all duration-300 shadow-md hover:shadow-lg"
             >
               LinkedIn
             </button>
             <button
               onClick={() => shareOnSocial('facebook')}
-              className="flex-1 min-w-[100px] px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              className="flex-1 min-w-[100px] px-4 py-3 bg-wine-dark text-cream rounded-xl hover:bg-forest transition-all duration-300 shadow-md hover:shadow-lg"
             >
               Facebook
             </button>
@@ -161,11 +161,11 @@ const Result = ({ result, onRestart }) => {
               type="text"
               value={shareUrl}
               readOnly
-              className="flex-1 px-3 py-2 border border-gray-300 rounded-lg bg-gray-50 text-sm"
+              className="flex-1 px-4 py-3 border border-taupe/30 rounded-xl bg-cream/30 text-sm text-wine-dark"
             />
             <button
               onClick={copyToClipboard}
-              className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors"
+              className="px-5 py-3 bg-taupe/30 text-wine-dark rounded-xl hover:bg-taupe/40 transition-all duration-300 font-medium"
             >
               {isCopied ? '복사됨!' : '링크 복사'}
             </button>
@@ -174,7 +174,7 @@ const Result = ({ result, onRestart }) => {
         
         <button
           onClick={onRestart}
-          className="w-full bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-semibold py-3 px-6 rounded-xl hover:from-indigo-600 hover:to-blue-700 transition-all duration-200"
+          className="w-full bg-gradient-to-r from-wine to-forest text-cream font-bold py-4 px-6 rounded-2xl hover:from-wine-dark hover:to-forest transition-all duration-300 shadow-xl hover:shadow-2xl"
         >
           다시 테스트하기
         </button>
